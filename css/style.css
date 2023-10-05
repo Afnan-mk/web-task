@@ -1,0 +1,727 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.header{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    height: 60px;    
+}
+.header .container{
+    width: 80%;
+    margin: auto;
+    padding: 5px 0;
+}
+.header img{
+    float: left;
+    width: 50px;
+    height: 45px;
+}
+.header ul{
+    float: right;
+    padding-top: 15px;
+}
+.header ul li{
+    display: inline-block;
+}
+.header ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 20px;
+    padding-bottom: 10px;
+    position: relative;
+}
+.header ul li a::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: red;
+    content: "";
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.header ul li a.active::after, .header ul li a:hover:after{
+    width: 100%;
+}
+.hero-sec{
+    position: relative;
+    background-image: url(../imgs/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.hero-sec .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.6);
+}
+.hero-sec .overlay .hero-content{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    color: white;
+}
+.hero-sec .overlay .hero-content h1{
+    font-size: 60px;
+    font-weight: 500;
+}
+.hero-sec .overlay .hero-content p{
+    font-size: 20px;
+    margin: 15px 0 45px 0;
+    color: rgb(202, 202, 202);
+}
+.hero-sec .overlay .hero-content button{
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 1px solid white;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.hero-sec .overlay .hero-content button.non-active{
+    padding: 15px 20px;
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+.hero-sec .overlay .hero-content button:hover, .hero-sec .overlay .hero-content button.non-active:hover{
+    background-color: black;
+    color: white;
+    border:  1px solid transparent;
+}
+
+/* _____________________________________________________________________________________________________________________________________________________________ */
+
+.about{
+    margin: 80px 0;
+}
+.about>h2, .projects>h2, .pricing>h2, .team>h3, .blog>h3{
+    text-align: center;
+    margin-bottom: 80px;
+    font-size: 30px;
+    position: relative;
+}
+.about>h2::after, .projects>h2::after, .pricing>h2::after, .team>h3::after, .blog>h3::after{
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5%;
+    height: 3px;
+    content: "";
+    background-color: red;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+.about .container{
+    width: 80%;
+    margin: auto;
+    overflow: auto;
+}
+.about .container div{
+    width: 32%;
+    float: left;
+    background-color: rgb(240, 240, 240);
+    text-align: center;
+    padding: 30px;
+    position: relative;
+    z-index: 0;
+}
+.about .container div.custome{
+    margin: 0 2%;
+}
+.about .container div .about-icons{
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: red;
+}
+.about .container div p{
+    margin: 10px 0 30px 0;
+    color: rgb(100, 100, 100);
+}
+.about .container div a{
+    text-decoration: none;
+    color: red;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.about .container div::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    content: "";
+    background-color: #333;   
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s; 
+}
+.about .container div:hover::after{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.about .container div:hover{
+    color: rgb(224, 224, 224);
+}
+.about .container div:hover p{
+    color: rgb(179, 179, 179);
+}
+
+/* _____________________________________________________________________________________________________________________________________________________________ */
+
+.projects{
+    padding: 40px 0;
+}
+.projects .container{
+    width: 80%;
+    margin: auto;
+}
+.projects-items{
+    overflow: auto;
+    margin: 50px 0;
+}
+.projects-items>div{
+    width: 23.5%;
+    float: left;
+    position: relative;
+}
+.projects-items>div>img{
+    width: 100%;
+}
+.prject-item{
+    margin-left: 2%;
+}
+.prject-item1{
+    margin: 0 2%;
+}
+.projects-items>div>div.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.65);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+.projects-items>div>div.overlay>div{
+   width: 70%;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-20%);
+   -webkit-transform: translate(-50%,-20%);
+   -moz-transform: translate(-50%,-20%);
+   -ms-transform: translate(-50%,-20%);
+   -o-transform: translate(-50%,-20%);
+   transition: 1s;
+   -webkit-transition: 1s;
+   -moz-transition: 1s;
+   -ms-transition: 1s;
+   -o-transition: 1s;
+}
+.projects-items>div>div.overlay>div button{
+    color: white;
+    font-size: 12px;
+    background-color: red;
+    padding: 6px;
+    margin-top: 20px;
+}
+.projects-items>div>div.overlay>div p{
+    color: rgb(226, 226, 226);
+    margin-bottom: 5px
+}
+.projects-items>div:hover .overlay{
+    visibility: visible;
+    opacity: 1;
+ 
+}
+.projects-items>div:hover .overlay>div{
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+
+/* _____________________________________________________________________________________________________________________________________________________________ */
+
+.services{
+    margin: 40px 0;
+}
+.services .container{
+    margin-bottom: 25px;
+}
+.services .container div{
+    padding-top: 40px;
+   text-align: left;
+   background-color: white;
+   border: 1px solid rgb(204, 204, 204);
+}
+.services .container div p{
+   padding-left: 52px;
+   padding-top: 15px;
+}
+.service-icons{
+color: red;
+margin-right: 20px;
+}
+
+/* _____________________________________________________________________________________________________________________________________________________________ */
+
+.can-do{
+    margin: 120px 0;
+}
+.can-do .container{
+    width: 80%;
+    margin: auto;
+    overflow: auto;
+}
+.can-do .container .description{
+    width: 44%;
+    float: left;
+    background-color: #f5f5f7;
+    padding: 80px 20px 225px 80px;
+}
+.can-do .container .description h2{
+    position: relative;
+    margin-bottom: 70px;
+}
+.can-do .container .description h2::after{
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    content: "";
+    background-color: red;   
+}
+.can-do .container .description p{
+    margin-bottom: 20px;
+    color: #333;
+    word-spacing: 1.5px;
+}
+.can-do .container .description ul li{
+    list-style: none;
+    color: #333;
+    word-spacing: 1.5px;
+}
+.can-do .container .images{
+    width: 50%;
+    float: right;
+}
+.can-do .container .images>div{
+   margin-bottom: 10px;
+}
+.can-do .container .images img{
+    margin-right:1.5%;
+    width: 48%;
+}
+.can-do .container .images ul{
+    text-align: center;
+}
+.can-do .container .images ul li{
+    display:inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(206, 206, 206);
+    margin:0 5px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.can-do .container .images ul li.active, .can-do .container .images ul li:hover{
+    background-color: red;
+}
+
+/* _____________________________________________________________________________________________________________________________________________________________ */
+
+.counter{
+    position: relative;
+    background-image: url(../imgs/3.jpg);
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100%;
+   height: 300px;
+   margin-bottom: 80px;
+}
+.counter .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000094;
+}
+.counter .container{
+    width: 80%;
+    margin: auto;
+    overflow: auto;
+}
+.counter .container div{
+    width: 25%;
+    float: left;
+    text-align: center;
+    color: white;
+    padding: 100px 0;
+}
+.counter .container div .counter-icons{
+    color: red;
+    font-size: 30px;
+}
+.counter .container div h3{
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+/* _____________________________________________________________________________________________________________________________________________________________ */
+
+.pricing .container{
+    width: 65%;
+    margin: 40px auto;
+    overflow: auto;
+}
+.pricing .title{margin-bottom: 30px;}
+.pricing .table{
+    width: 31%;
+    border: 1px solid rgb(150, 150, 150);
+    text-align: center;
+    color: rgb(117, 117, 117);
+    padding: 50px 0;
+    float: left;
+    margin:0 1%;
+    margin-top: 40px;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    position: relative;
+}
+.pricing .circle{
+    padding: 13px;
+    margin: auto;
+    font-size: 13px;
+    font-weight: 600;
+    color: black;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    border: 1px solid black;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.pricing span{
+    font-size: 32px;
+}
+.pricing p.description{
+    margin: 30px 0;
+}
+.pricing button{
+    padding: 8px 16px;
+    border: 0.5px solid grey;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    background-color: rgb(179, 0, 0);
+    color: white;
+}
+.pricing .table::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    content: "";
+    background-color: #33333381;   
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s; 
+}
+.pricing .table:hover::after{
+    height: 100%;
+    z-index: -1;
+}
+.pricing .table:hover .title{
+    color: red;
+}
+.pricing .table:hover p.description{
+    color: black;
+}
+
+/* _____________________________________________________________________________________________________________________________________________________________ */
+
+.comments{
+    background-image: url(../imgs/05-770x455.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 80px;
+}
+.comments .container{
+    width: 55%;
+    margin: auto;
+    overflow: auto;
+    padding: 150px 0;
+}
+.comments .container>div{
+    background-color: rgba(255, 255, 255, 0.87);
+    width: 48%;
+    float: left;
+    margin-left: 2%;
+}
+.comments .container>div>div{
+    overflow: auto;
+}
+.comments .container>div>div img{
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin: 30px 10px 10px 50px;
+    float: left;
+}
+.comments .container>div>div h3{
+    float: left;
+    margin: 50px 10px 10px 10px;
+}
+.comments .container>div>div h3 span{
+    font-weight: lighter;
+    font-size: 14px;
+}
+.comments .container>div p{
+    margin: 10px 20px 30px 60px;
+}
+
+/* _____________________________________________________________________________________________________________________________________________________________ */
+
+.team{
+    background-image: url(../imgs/texture.jpg);
+    background-repeat: no-repeat;
+    padding: 100px 0;
+}
+.team .container{
+    width: 55%;
+    margin: auto;
+    overflow:hidden;
+}
+.team .container .team-details{
+    width: 30%;
+    float: left;
+    margin-left: 3%;
+    background-color: #ffffff ;
+    text-align: center;
+    position: relative;
+    padding-bottom: 30px;
+}
+.team .container .team-details>div .overlay{
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.459);
+    padding-top: 20px;
+    display: none;
+    z-index: 1;
+}
+.team .container .team-details:hover .overlay{
+    display: block;
+}
+.team .container .team-details>div .overlay a{
+    color: red;
+    background-color: rgb(218, 218, 218);
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+}
+.team .container .team-details>div .overlay a i{
+    line-height: 40px;
+}
+.team .container .team-details>div img{
+    width: 100%;
+    height: 300px;
+}
+.team .container .team-details h3{
+    padding: 20px 0 5px 0;
+}
+.team .container .team-details span{
+    color: #414141;
+    font-size: 14px;
+}
+.team .container .team-details:hover span{
+    color: rgb(252, 46, 46);
+}
+.team-details::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    content: "";
+    background-color: #333333;   
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s; 
+    opacity: 0;
+}
+.team-details:hover::after{
+    height: 100%;
+    opacity: 0.4;
+}
+
+/* _____________________________________________________________________________________________________________________________________________________________ */
+
+.blog{
+    padding: 80px 0;
+}
+.blog .container{
+    width:70%;
+    margin: auto;
+    overflow: auto;
+}
+.blog .container>div{
+    width:31%;
+    float: left;
+    background-color: #f5f5f7;
+    padding-bottom: 40px;
+    margin:0 1%;
+    position: relative;
+}
+.blog .container>div img{
+    width:100%;
+}
+.blog .container>div ul{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.blog .container>div ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+}
+.blog .container>div h3{
+    margin: 25px 0 10px 20px;
+}
+.blog .container>div p{
+    margin-bottom:10px;
+    margin-left: 20px;
+    color: #3f3f3f;
+    line-height: 24px;
+}
+.blog .container>div a{
+    margin-left: 20px;
+    color: red
+}
+.blog .container>div::after{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    content: "";
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    background-color: #0000006c;
+}
+.blog .container>div:hover::after{
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+
+/* _____________________________________________________________________________________________________________________________________________________________ */
+
+.footer{
+    padding: 35px 0;
+    background-color: #2b2b2b;
+    text-align: center;
+}
+.footer img{
+    width: 60px;
+    height: 55px;
+    margin-bottom: 35px;
+}
+.footer ul li{
+    display: inline-block;
+    margin: 0 3px;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.footer ul li:hover{
+    color: red;
+}
+.footer li i{
+    font-size: 16px;
+    line-height: 40px;
+}
+.footer p{
+    margin-top: 15px;
+    color: #8f8f8f;
+    font-size: 14px;
+}
